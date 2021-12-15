@@ -24,11 +24,14 @@ namespace Zadanie
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btn_1(object sender, RoutedEventArgs e)
         {
-            this.Hide();
-            MainWindow w21 = new MainWindow();
-            w21.Show();
+            MainWindow secondWindow1 = new MainWindow();
+            secondWindow1.Show();
+            this.Close();
         }
     }
+  
+
+
 }

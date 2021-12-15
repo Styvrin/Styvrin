@@ -5,9 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Zadanie"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800">
+        Title="SecondPos" Height="450" Width="800" Icon="service_logo.png" FontFamily="Tw Cen MT" WindowStartupLocation="CenterScreen"> 
     <Grid>
-        <Button Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="88" Margin="694,10,0,0" Height="29" Click="Button_Click"/>
+
+
+        <DataGrid x:Name="Dann" FontSize="14" Margin="10,89,10,48" AutoGenerateColumns="False" FontFamily="Tw Cen MT" Foreground="Black" BorderBrush="#FFFF9C1A" Background="#FFFFFFE1" OpacityMask="#FF7E3A3A"  >
+
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Binding="{Binding Path=Name}" Header="Name" Width="150" IsReadOnly="False" CanUserSort="True"   />
+                <DataGridTextColumn Binding="{Binding Path=Surname}" Header="Surname" Width="150" IsReadOnly="False" CanUserSort="True"  />
+                <DataGridTextColumn Binding="{Binding Path=Age}" Header="Age" Width="80" IsReadOnly="False"/>
+                <DataGridTextColumn Binding="{Binding Path=Phone}" Header="Phone" Width="150" IsReadOnly="False"/>
+                <DataGridTextColumn Binding="{Binding Path=Email, UpdateSourceTrigger=PropertyChanged}" Header="Email" Width="120" IsReadOnly="False"/>
+
+                <DataGridCheckBoxColumn Binding="{Binding Path=Vac}" Header="Online" Width="*" IsReadOnly="False"/>
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+        <TextBox x:Name="Sorting" FontFamily="Tw Cen MT" HorizontalAlignment="Left" Height="23" Margin="10,61,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153" BorderBrush="#FFFF9C1A"/>
+        <TextBlock HorizontalAlignment="Left" FontFamily="Tw Cen MT" Margin="10,39,0,0" TextWrapping="Wrap" Text="Name:" VerticalAlignment="Top" Height="22" Width="105"/>
+        <Button Content="2"  FontFamily="Tw Cen MT" HorizontalAlignment="Right" Margin="0,0,10,10" Width="18" Background="#FFFF9C1A" BorderBrush="#FFFF9C1A" Foreground="#FFFFFFE1" Height="20" VerticalAlignment="Bottom"/>
+        <Button  Content="1" Click="btn_1" FontFamily="Tw Cen MT" HorizontalAlignment="Right" Margin="0,0,33,10" VerticalAlignment="Bottom" Width="18" Background="White" BorderBrush="#FFFF9C1A" Height="20"/>
 
     </Grid>
 </Window>

@@ -82,16 +82,16 @@ namespace Zadanie
 
         }
 
-        private void Exit_Click(object sender, RoutedEventArgs e)
+        private void btn_2(object sender, RoutedEventArgs e)
         {
-            this.Hide();
-            Window1 w1 = new Window1();
-            w1.Show();
+            Window1 secondWindow = new Window1();
+            secondWindow.Show();
+            this.Close();
+
+
+
+
         }
-
-
     }
-
-
 }
 

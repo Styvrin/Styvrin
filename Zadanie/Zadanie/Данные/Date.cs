@@ -85,7 +85,9 @@ namespace Zadanie.Данные
                 OnPropertyChanged("Vac");
             }
         }
-      
+  
+
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 
